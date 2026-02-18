@@ -5,158 +5,104 @@ The Predictive Disease Outbreak Dashboard is an AI-powered health analytics syst
 
 The system integrates:
 
-Hospital admission records
-
-Water quality monitoring data
+- Hospital admission records
+- Water quality monitoring data
 
 Using machine learning algorithms, the platform detects anomalies, identifies correlations between contaminated water and rising hospital cases, and predicts potential outbreak hotspots.
 
 It provides:
 
-48-hour outbreak forecasting
-
-Risk classification (Low / Medium / High)
-
-Interactive geo-spatial heatmaps
-
-Automated alerts for authorities
+- 48-hour outbreak forecasting
+- Risk classification (Low / Medium / High)
+- Interactive geo-spatial heatmaps
+- Automated alerts for authorities
 
 The dashboard enables health departments to shift from reactive response to predictive and preventive action.
 
 Tagline:
 Predictive. Preventive. Proactive.
 
-Problem It Solves
+## Problem It Solves
 
 Currently, disease outbreaks are usually detected after hospitals experience a surge in patients. This leads to:
 
-Delayed government response
-
-Shortage of medicines and medical staff
-
-No integration between hospital and water quality data
-
-Lack of real-time hotspot identification
-
-Higher mortality and faster disease spread
+- Delayed government response
+- Shortage of medicines and medical staff
+- No integration between hospital and water quality data
+- Lack of real-time hotspot identification
+- Higher mortality and faster disease spread
 
 There is no centralized system that correlates environmental risk factors (like contaminated water) with real-time health data.
-
 Our project solves this by:
 
-Integrating hospital + water datasets
+- Integrating hospital + water datasets
+- Detecting anomalies early
+- Predicting outbreaks before they escalate
+- Enabling faster preventive action
 
-Detecting anomalies early
+## Challenges Faced
 
-Predicting outbreaks before they escalate
+1. Data Integration Challenges
 
-Enabling faster preventive action
+- Different data formats (hospital vs water datasets)
+- Missing or inconsistent records
+- Real-time data ingestion complexity
 
-Challenges Faced
+2. Data Privacy & Security
 
-Data Integration Challenges
+- Protecting sensitive patient information
+- Ensuring secure data pipelines
 
-Different data formats (hospital vs water datasets)
+3. Model Accuracy
 
-Missing or inconsistent records
+- Avoiding false alarms
+- Limited historical outbreak data for training
+- Seasonal variations affecting predictions
 
-Real-time data ingestion complexity
+4. Infrastructure Limitations
 
-Data Privacy & Security
+- Rural areas may lack real-time reporting systems
+- Limited digital adoption in district hospitals
 
-Protecting sensitive patient information
+5. Scalability
 
-Ensuring secure data pipelines
+- Handling large datasets in real-time
+- Expanding from district to state/national level
 
-Model Accuracy
+## Technologies Used
 
-Avoiding false alarms
+### Frontend (User Interface)
+- ReactJS / Angular
+- Chart.js / D3.js for data visualization
+- Mapbox for geo-mapping
 
-Limited historical outbreak data for training
+### Backend
+- Python (Flask)
+- Node.js 
+- REST APIs
 
-Seasonal variations affecting predictions
+### Machine Learning
+- Scikit-learn
+- XGBoost / Random Forest
+- Time Series Models (SARIMA / LSTM)
+- Isolation Forest (Anomaly Detection)
 
-Infrastructure Limitations
+### Database
+- MongoDB (for flexible data storage)
 
-Rural areas may lack real-time reporting systems
+### Data Processing
+- Pandas
+- NumPy
+- Feature Engineering pipelines
 
-Limited digital adoption in district hospitals
+### Security
+- Role-based access control
 
-Scalability
-
-Handling large datasets in real-time
-
-Expanding from district to state/national level
-
-Technologies Used
-Frontend (User Interface)
-
-ReactJS / Angular
-
-Tailwind CSS / Bootstrap
-
-Chart.js / D3.js for data visualization
-
-Leaflet.js / Mapbox for geo-mapping
-
-Backend
-
-Python (Flask / FastAPI / Django)
-
-Node.js (optional)
-
-REST APIs
-
-Machine Learning
-
-Scikit-learn
-
-XGBoost / Random Forest
-
-Time Series Models (ARIMA / LSTM)
-
-Isolation Forest (Anomaly Detection)
-
-Database
-
-MongoDB (for flexible data storage)
-
-PostgreSQL (structured hospital data)
-
-Data Processing
-
-Pandas
-
-NumPy
-
-Feature Engineering pipelines
-
-Deployment & Cloud
-
-AWS / Azure / Google Cloud
-
-Docker
-
-CI/CD pipelines
-
-Security
-
-JWT Authentication
-
-HTTPS encryption
-
-Role-based access control
-
-Impact of the Project
-
-Reduces outbreak response time
-
-Saves lives through early detection
-
-Helps government allocate resources efficiently
-
-Supports data-driven health policy decisions
-
-Can be deployed at district level initially and scaled nationally
+## Impact of the Project
+- Reduces outbreak response time
+- Saves lives through early detection
+- Helps government allocate resources efficiently
+- Supports data-driven health policy decisions
+- Can be deployed at district level initially and scaled nationally
 
 
