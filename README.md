@@ -1,5 +1,5 @@
 # Project Title: Predictive Disease Outbreak Dashboard
-## Project Description
+## Project Description:
 
 The Predictive Disease Outbreak Dashboard is an AI-powered health analytics system designed to forecast water-borne disease outbreaks such as Cholera and Typhoid up to 48 hours in advance.
 
