@@ -1,108 +1,286 @@
-# Project Title: Predictive Disease Outbreak Dashboard
-## Project Description:
+# AEGIS-AI-Powered-Disease-Outbreak-Intelligence-Early-Warning-System
+AEGIS is an AI-driven epidemiological intelligence platform designed to detect, monitor, predict, and visualize infectious disease outbreaks across India.
 
-The Predictive Disease Outbreak Dashboard is an AI-powered health analytics system designed to forecast water-borne disease outbreaks such as Cholera and Typhoid up to 48 hours in advance.
+The platform combines machine learning, graph analytics, environmental monitoring, and real-time intelligence generation to provide actionable insights for healthcare authorities, public health agencies, and disaster response teams.
 
-The system integrates:
+AEGIS integrates disease surveillance data, weather patterns, water quality reports, hospital admissions, and outbreak predictions into a unified dashboard powered by Neo4j Graph Database.
 
-- Hospital admission records
-- Water quality monitoring data
+---
 
-Using machine learning algorithms, the platform detects anomalies, identifies correlations between contaminated water and rising hospital cases, and predicts potential outbreak hotspots.
+## Key Features
 
-It provides:
+### 🔐 Secure Authentication
 
-- 48-hour outbreak forecasting
-- Risk classification (Low / Medium / High)
-- Interactive geo-spatial heatmaps
-- Automated alerts for authorities
+* Firebase Authentication
+* Email & Password Login
+* Google Sign-In
+* Email Verification Workflow
+* Password Reset Support
 
-The dashboard enables health departments to shift from reactive response to predictive and preventive action.
+### 📊 Real-Time Epidemiological Dashboard
 
-Tagline:
-Predictive. Preventive. Proactive.
+* States Coverage
+* District Coverage
+* Admissions (Last 24 Hours)
+* Latest Prediction Runs
+* Water Quality Reports
+* Weather Monitoring
+* Active High-Risk Districts
+* Real-Time Data Freshness Indicator
 
-## Problem It Solves
+### 🧠 AI-Powered Disease Prediction
 
-Currently, disease outbreaks are usually detected after hospitals experience a surge in patients. This leads to:
+* Risk Classification
 
-- Delayed government response
-- Shortage of medicines and medical staff
-- No integration between hospital and water quality data
-- Lack of real-time hotspot identification
-- Higher mortality and faster disease spread
+  * Low
+  * Medium
+  * High
+  * Critical
+* Disease Spread Forecasting
+* Confidence Scoring
+* Hotspot Detection
 
-There is no centralized system that correlates environmental risk factors (like contaminated water) with real-time health data.
-Our project solves this by:
+### 🚨 Alert Management System
 
-- Integrating hospital + water datasets
-- Detecting anomalies early
-- Predicting outbreaks before they escalate
-- Enabling faster preventive action
+* Automatic Alert Generation
+* High-Risk District Monitoring
+* Active Alert Tracking
+* Critical Outbreak Escalation
 
-## Challenges Faced
+### 🌍 Geographic Intelligence
 
-1. Data Integration Challenges
+* Dynamic India District Registry
+* Border Adjacency Graph Mapping
+* State-Level Analytics
+* Regional Risk Assessment
 
-- Different data formats (hospital vs water datasets)
-- Missing or inconsistent records
-- Real-time data ingestion complexity
+### 📈 Advanced Visualizations
 
-2. Data Privacy & Security
+* Case Trends
+* Disease Distribution
+* Regional Risk Tables
+* National Risk Index
+* Intelligence Briefing Dashboard
 
-- Protecting sensitive patient information
-- Ensuring secure data pipelines
+### 🤖 Intelligence Briefing Engine
 
-3. Model Accuracy
+Generates deterministic outbreak intelligence from live data:
 
-- Avoiding false alarms
-- Limited historical outbreak data for training
-- Seasonal variations affecting predictions
+* Emerging Hotspots
+* Escalation Factors
+* Environmental Correlations
+* Spread Projections
+* Recommended Actions
 
-4. Infrastructure Limitations
+---
 
-- Rural areas may lack real-time reporting systems
-- Limited digital adoption in district hospitals
+## System Architecture
 
-5. Scalability
+Frontend
 
-- Handling large datasets in real-time
-- Expanding from district to state/national level
+* React.js
+* Vite
+* Tailwind CSS
+* Recharts
+* React Query
 
-## Technologies Used
+Backend
 
-### Frontend (User Interface)
-- ReactJS / Angular
-- Chart.js / D3.js for data visualization
-- Mapbox for geo-mapping
+* Node.js
+* Express.js
+* Neo4j Graph Database
+* Redis Cache (with In-Memory Fallback)
 
-### Backend
-- Python (Flask)
-- Node.js 
-- REST APIs
+Authentication
 
-### Machine Learning
-- Scikit-learn
-- XGBoost / Random Forest
-- Time Series Models (SARIMA / LSTM)
-- Isolation Forest (Anomaly Detection)
+* Firebase Authentication
 
-### Database
-- MongoDB (for flexible data storage)
+Infrastructure
 
-### Data Processing
-- Pandas
-- NumPy
-- Feature Engineering pipelines
+* GitHub
+* Render
+* Vercel
 
-### Security
-- Role-based access control
+---
 
-## Impact of the Project
-- Reduces outbreak response time
-- Saves lives through early detection
-- Helps government allocate resources efficiently
-- Supports data-driven health policy decisions
-- Can be deployed at district level initially and scaled nationally
+## Database Model
+
+### Core Nodes
+
+* State
+* District
+* Hospital
+* Disease
+* HospitalAdmission
+* WeatherPattern
+* WaterQualityReport
+* OutbreakPrediction
+* Alert
+
+### Relationships
+
+* IN_DISTRICT
+* REPORTED_BY
+* FOR_DISEASE
+* LOCATED_IN
+* BORDER_ADJACENT
+
+---
+
+## Real-Time Telemetry
+
+AEGIS continuously tracks:
+
+* Total States
+* Total Districts
+* Admissions (Last 24 Hours)
+* Latest Prediction Run
+* Weather Observations
+* Water Reports
+* Active High-Risk Districts
+* Last Data Refresh Timestamp
+
+---
+
+## Technology Stack
+
+| Layer            | Technology                |
+| ---------------- | ------------------------- |
+| Frontend         | React, Vite, Tailwind CSS |
+| Backend          | Node.js, Express.js       |
+| Database         | Neo4j AuraDB              |
+| Authentication   | Firebase                  |
+| Caching          | Redis                     |
+| Charts           | Recharts                  |
+| State Management | React Query               |
+| Deployment       | Vercel, Render            |
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/aegis.git
+
+cd aegis
+```
+
+### Frontend Setup
+
+```bash
+npm install
+
+npm run dev
+```
+
+### Backend Setup
+
+```bash
+cd server
+
+npm install
+
+node server.js
+```
+
+---
+
+## Environment Variables
+
+### Frontend (.env)
+
+```env
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+```
+
+### Backend (.env)
+
+```env
+PORT=5000
+
+NEO4J_URI=
+NEO4J_USERNAME=
+NEO4J_PASSWORD=
+
+REDIS_URL=
+```
+
+---
+
+## Example Analytics
+
+### Disease Forecasting
+
+* Cholera
+* Dengue
+* Malaria
+* Typhoid
+
+### Risk Prediction Levels
+
+* Low
+* Medium
+* High
+* Critical
+
+### Environmental Correlations
+
+* Rainfall
+* Temperature
+* Humidity
+* Water Quality
+* E. coli Levels
+* Turbidity
+
+---
+
+## Project Highlights
+
+✔ Graph-Based Disease Surveillance
+
+✔ Real-Time Outbreak Intelligence
+
+✔ Predictive Risk Assessment
+
+✔ Automated Alert Generation
+
+✔ Geo-Spatial Risk Monitoring
+
+✔ Firebase Authentication
+
+✔ Neo4j Analytics Engine
+
+✔ AI-Powered Intelligence Briefing
+
+✔ Production-Ready Dashboard
+
+---
+
+## Future Enhancements
+
+* Satellite Weather Integration
+* GIS Heatmaps
+* Mobile Application
+* SMS & Email Alerting
+* LLM-Powered Intelligence Reports
+* Government Health API Integrations
+
+---
+
+## Authors
+
+Developed as part of an AI & Public Health Analytics Project.
+
+### AEGIS
+
+**AI-Powered Disease Outbreak Intelligence & Early Warning System**
+
 
 
